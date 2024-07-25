@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml"   th:fragment="parent(content,title,script)">
+<html lang="en"   class="dark"  xmlns:th="http://www.w3.org/1999/xhtml"   th:fragment="parent(content,title,script)">
 <head>
     <meta charset="UTF-8"  >
     <meta name="viewport"
@@ -10,11 +10,13 @@
  <link rel="stylesheet"  data-th-href="@{'/css/output.css'}" />
 
  <!-- flowbite tailwind compontes webite link   -->
- <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title data-th-replace="${title}">Base page</title>
 </head>
-<body>
+<body class="dark:bg-gray-900  dark:text-white">
 
 
 
@@ -22,12 +24,14 @@
 <div data-th-replace="~{navbar :: navbar}"></div>
 
 
+<div class="p-4"  style="margin:183px">
 
-<!--  <section data-th-replace="${content}">  </section>-->
+ <section data-th-replace="${content}">  </section>
+</div>
 
-
+<div class="p-4" >
 <!--<footer class="p-5">-->
-
+</div>
 <!--    <div > Learn with me</div>-->
 <!--</footer>-->
 
@@ -36,6 +40,7 @@
 <!-- flowbite -->
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 
+<script data-th-src="@{/images/js/script.js}" ></script>
 
 <th-block   data-th-replace="${script}"></th-block>
 </body>
