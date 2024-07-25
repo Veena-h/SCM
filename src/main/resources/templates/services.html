@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml"  th:replace="~{base :: parent(~{ :: #content},~{ :: title},~{ :: script})}">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title> Services page</title>
 </head>
 <body>
-<h1>services</h1>
+
+<div id="content">
+
+    <h1>welcome to Services page</h1>
+</div>
+
+<script>
+
+    console.log("services page");
+
+</script>
+
 </body>
 </html>

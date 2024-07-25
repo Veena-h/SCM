@@ -25,12 +25,42 @@ public class PageController
 
     }
 
-    @RequestMapping("/services1")
+    @RequestMapping("/services")
     public String services()
     {
         System.out.println("services page");
         return "services";
 
     }
+
+
+    @RequestMapping("/contact")
+    public String contact()
+    {
+        System.out.println("contact page");
+        return "contact";
+
+    }
+
+
+
+    @RequestMapping("/registration")
+    public String registration()
+    {
+        System.out.println("registration page");
+        return "registration";
+
+    }
+
+
+
+    @RequestMapping("/login")
+    public String login()
+    {
+        System.out.println("login page");
+        return "login";
+
+    }
+
 
 }
