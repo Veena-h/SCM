@@ -1,21 +1,25 @@
 package com.scm.scmproject.entities;
 
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
+
+
 
 @Entity
 @Table(name = "users")
 @Setter
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@Builder  //it requires  all argument annotation or constructor
 public class Users
 {
+
+
 
     @Id
     private String userId;
@@ -34,12 +38,12 @@ public class Users
     private boolean phoneVerified=false;
 
 
+    @Enumerated(value = EnumType.STRING)
     private Provider provider=Provider.self;
     private String providerUserId;
 
        @OneToMany(mappedBy = "user" ,cascade = CascadeType.ALL ,fetch = FetchType.LAZY ,orphanRemoval = true)
        private List<Contact> contacts=new ArrayList<>();
-
 
 
 
